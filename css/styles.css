@@ -18,6 +18,7 @@
   --background-overlay: rgba(33, 150, 243, 0.9);
   --backdrop-modal: rgba(0, 0, 0, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
+  --background-btn-modal-focus: #188CE8;
 }
 
 html {
@@ -243,6 +244,15 @@ img {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+.close-pointer {
+  fill: currentColor;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  color: var(--accent-color);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -255,6 +265,10 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 200px;
+}
+
+.form .link:focus {
+  background-color: var(--background-btn-modal-focus);
 }
 
 .form b {
@@ -279,9 +293,15 @@ img {
   left: 12px;
   width: 18px;
   height: 18px;
+  fill: currentColor;
 }
 
-.form-field label {
+.form-icon:focus {
+  color: var(--accent-color);
+ 
+}
+
+.form-label {
   text-align: left;
   margin-bottom: 4px;
 
@@ -292,7 +312,7 @@ img {
   color: var(--title-text-color);
   letter-spacing: 0.01em;
 }
-.form-field input {
+.form-input {
   display: flex;
   width: 448px;
   height: 40px;
@@ -301,6 +321,13 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+}
+.form-input:focus + .form-icon {
+  color: var(--accent-color);
+}
+
+.form-input:focus {
+  border-color: rgba(255, 0, 0, 1);
 }
 
 textarea {
@@ -318,9 +345,7 @@ textarea {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.form-field input::placeholder {
-  color: var(--placeholder-color);
-}
+
 .form-checkbox label {
   font-style: normal;
   font-weight: 400;
