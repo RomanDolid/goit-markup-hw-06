@@ -57,7 +57,7 @@
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="btn-close" data-modal-close><svg class="close-pointer"width="11px" height="11px">
+          <button class="btn-close" data-modal-close><svg class="close-pointer" width="11px" height="11px">
               <use xlink:href="./images/sprite.svg#close"></use>
             </svg></button>
 
@@ -66,19 +66,25 @@
             <div class="form-field">
               <label for="name" class=form-label>Имя</label>
               <input type="text" class=form-input name="name" id="name" />
-              <svg class="form-icon"><use xlink:href="./images/sprite.svg#name"></use></svg>
+              <svg class="form-icon">
+                <use xlink:href="./images/sprite.svg#name"></use>
+              </svg>
             </div>
 
             <div class="form-field">
               <label for="tel" class=form-label>Телефон</label>
               <input type="tel" class=form-input name="tel" id="tel" />
-              <svg class="form-icon"><use xlink:href="./images/sprite.svg#coll"></use></svg>
+              <svg class="form-icon">
+                <use xlink:href="./images/sprite.svg#coll"></use>
+              </svg>
             </div>
 
             <div class="form-field">
               <label for="mail" class=form-label>Почта</label>
               <input type="email" class=form-input name="mail" id="mail" />
-              <svg class="form-icon"><use xlink:href="./images/sprite.svg#mail"></use></svg>
+              <svg class="form-icon">
+                <use xlink:href="./images/sprite.svg#mail"></use>
+              </svg>
             </div>
 
             <div class="form-field">
@@ -86,10 +92,11 @@
               <textarea class="comment" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
             </div>
 
-            <div class="form-checkbox">
-              <input type="checkbox" name="policy" id="policy" />
-              <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
-            </div>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="policy" />
+              <span class="check-icon"></span>
+              Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#">Условия договора</a>
+            </label>
 
             <button class="link" type="submit">Отправить</button>
           </form>

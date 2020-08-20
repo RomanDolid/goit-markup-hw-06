@@ -18,7 +18,7 @@
   --background-overlay: rgba(33, 150, 243, 0.9);
   --backdrop-modal: rgba(0, 0, 0, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
-  --background-btn-modal-focus: #188CE8;
+  --background-btn-modal-focus: #188ce8;
 }
 
 html {
@@ -298,7 +298,6 @@ img {
 
 .form-icon:focus {
   color: var(--accent-color);
- 
 }
 
 .form-label {
@@ -326,17 +325,17 @@ img {
   color: var(--accent-color);
 }
 
-.form-input:focus {
-  border-color: rgba(255, 0, 0, 1);
+.form-input:focus,
+.comment:focus {
+  outline-color: var(--accent-color);
 }
 
-textarea {
+.comment {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-}
-.comment {
+
   padding: 12px 16px;
 
   font-style: normal;
@@ -346,7 +345,21 @@ textarea {
   letter-spacing: 0.01em;
 }
 
-.form-checkbox label {
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -355,9 +368,31 @@ textarea {
 
   color: var(--title-text-color);
 }
-.form-checkbox {
-  margin-bottom: 30px;
+
+.checkbox-label a {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  margin-left: 12px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 4px;
+
+}
+
+.checkbox-input:checked + .check-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url("../images/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
 .advantage,
 .operations,
 .team,
