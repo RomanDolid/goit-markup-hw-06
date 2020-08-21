@@ -345,15 +345,10 @@ img {
   letter-spacing: 0.01em;
 }
 
-.checkbox-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.comment::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--placeholder-color);
 }
 
 .checkbox-label {
@@ -369,6 +364,16 @@ img {
   color: var(--title-text-color);
 }
 
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .checkbox-label a {
   color: var(--accent-color);
   text-decoration: underline;
@@ -382,7 +387,6 @@ img {
   margin-left: 12px;
   border: 2px solid var(--primary-text-color);
   border-radius: 4px;
-
 }
 
 .checkbox-input:checked + .check-icon {
